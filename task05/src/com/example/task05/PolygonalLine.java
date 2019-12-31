@@ -39,8 +39,11 @@ public class PolygonalLine {
      * @return длину ломаной линии
      */
     public double getLength() {
-        // TODO: реализовать
-        throw new AssertionError();
+        double sum = 0;
+        for (int i = 0; i < points.size() - 1; i++){
+            sum += points.get(i).getLength(points.get(i + 1));
+        }
+        return sum;
     }
 
 }

@@ -42,8 +42,9 @@ public class Point {
      * @return расстояние от текущей точки до переданной
      */
     public double getLength(Point point) {
-        // TODO: реализовать
-        throw new AssertionError();
+//        double dist = Math.sqrt((point.x - this.x) * 2 + (point.y - this.y) * 2);
+        return Math.sqrt((x - point.x) * (x - point.x) + (y - point.y) * (y - point.y));
+//        return dist;
     }
 
 }
